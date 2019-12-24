@@ -117,7 +117,7 @@ namespace FdfParser
                 {
                     case CommentType.Page:
                         if (i != 0)
-                            comments.Append("\n\n");
+                            comments.Append("\n");
                         comments.Append("pag. " + comment);
                         comments.Append("\n");
                         break;
