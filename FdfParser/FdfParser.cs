@@ -119,6 +119,8 @@ namespace FdfParser
                         if (i != 0)
                             comments.Append("\n");
                         comments.Append("pag. " + comment);
+                        if (i != finalOrder.Count - 1 && Comment.GetCommentType(finalOrder[i + 1]) == CommentType.Page)
+                            comments.Append("\n[no text]");
                         comments.Append("\n");
                         break;
                     case CommentType.Number:
